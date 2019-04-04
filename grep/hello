@@ -1,0 +1,10 @@
+args=($@)
+
+length=${#args[@]}
+STR=""
+
+for ((i=0;i<$length;i++)); do
+  STR=" "$STR" "${args[${i}]}
+done
+echo $STR
+node hello.js $STR
